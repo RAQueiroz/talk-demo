@@ -1,20 +1,20 @@
 import React from 'react'
-import '@testing-library/jest-dom/extend-expect'
-import { render, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom/extend-expect' // 🤨
+import { render, fireEvent } from '@testing-library/react' // 🤨
 import Accordion from './Accordion'
 
-test.skip('can open accordion items to see the contents', () => {
-  const hats = {title: 'Favorite Hats', contents: 'Fedoras are classy'}
-  const footware = {
-    title: 'Favorite Footware',
-    contents: 'Flipflops are the best',
+test('can open accordion items to see the contents', () => {
+  const lotr = {title: 'Gandalf - LOTR', contents: 'You shall not pass!'}
+  const matrix = {
+    title: 'Neo - The Matrix',
+    contents: 'What is the Matrix ?',
   }
   const {getByText, queryByText} = render(
-    <Accordion items={[hats, footware]} />,
+    <Accordion items={[lotr, matrix]} />,
   )
-  expect(getByText(hats.contents)).toBeInTheDocument()
-  expect(queryByText(footware.contents)).toBeNull()
-  fireEvent.click(getByText(footware.title))
-  expect(getByText(footware.contents)).toBeInTheDocument()
-  expect(queryByText(hats.contents)).toBeNull()
+  expect(getByText(lotr.contents)).toBeInTheDocument() // 🤨
+  expect(queryByText(matrix.contents)).toBeNull() 
+  fireEvent.click(getByText(matrix.title)) // 🤨
+  expect(getByText(matrix.contents)).toBeInTheDocument()
+  expect(queryByText(lotr.contents)).toBeNull() // 🤨
 })
