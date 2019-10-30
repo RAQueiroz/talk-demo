@@ -13,10 +13,13 @@ test('setOpenIndex sets the open index state properly', () => {
 })
 
 test('Accordion renders AccordionContents with the item contents', () => {
-  const hats = {title: 'Favorite Hats', contents: 'Fedoras are classy'}
+  const hats = {
+    title: 'Favorite Hats',
+    contents: 'Fedoras are classy'
+  }
   const footware = {
     title: 'Favorite Footware',
-    contents: 'Flipflops are the best',
+    contents: 'Flipflops are the best'
   }
   const wrapper = mount(<Accordion items={[hats, footware]} />)
   expect(wrapper.find('AccordionContents').props().children).toBe(hats.contents)

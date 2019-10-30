@@ -13,6 +13,7 @@ function App() {
       </h1>
       <br />
       <div className="container">
+        <h1 className="title is-2">Citações</h1>
         <Accordion items={items} />
       </div>
     </section>

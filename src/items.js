@@ -1,21 +1,18 @@
-import React from 'react'
-
 export default [
   {
-    title: 'Item1',
-    contents: 'Este é o primeiro item do nosso elemento accordion.'
+    title: 'Hannibal Lecter - Silence Of The Lambs',
+    contents: `"I'm having an old friend for dinner."`
   },
   {
-    title: 'Item2',
-    contents: 'Este é o segundo item do nosso elemento accordion.'
+    title: 'Jack Torrance - The Shining',
+    contents: `"Here's Johnny!"`
   },
   {
-    title: 'Item3',
-    contents: (
-      <div>
-        <p>Teste</p>
-        <button>Save</button>
-      </div>
-    )
+    title: 'King Leonidas - 300',
+    contents: `This is sparta!`
+  },
+  {
+    title: 'Gollum - LOTR',
+    contents: `"My precious."`
   }
 ]

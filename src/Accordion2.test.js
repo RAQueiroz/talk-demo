@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect'
 import { render, fireEvent } from '@testing-library/react'
 import Accordion from './Accordion'
 
-test('can open accordion items to see the contents', () => {
+test.skip('can open accordion items to see the contents', () => {
   const hats = {title: 'Favorite Hats', contents: 'Fedoras are classy'}
   const footware = {
     title: 'Favorite Footware',
